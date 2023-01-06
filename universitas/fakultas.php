@@ -50,8 +50,8 @@ if(isset($_POST['simpan'])){
 				<td><input class="form-control" type="text" name="nama_fakultas"></td>
 			</tr>
 			<tr colspan="2" alighn="center">
-				<td><input class="btn btn-primary" type="submit" name="simpan" value="SIMPAN"></td>
-				<td><input class="btn btn-primary" type="reset" name="cancel" value="BATALKAN"></td>
+				<td><input class="btn btn-primary" type="submit" name="simpan" value="simpan"></td>
+				<td><input class="btn btn-primary" type="reset" name="cancel" value="reset"></td>
 			</tr>	
 			
 		</div>

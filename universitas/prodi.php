@@ -51,8 +51,8 @@ if(isset($_POST['simpan'])){
 			</tr>
 			<tr>
 			<tr colspan="2" alighn="center">
-				<td><input class="btn btn-primary" type="submit" name="simpan" value="SIMPAN"></td>
-				<td><input class="btn btn-primary" type="reset" name="cancel" value="BATALKAN"></td>
+				<td><input class="btn btn-primary" type="submit" name="simpan" value="simpan"></td>
+				<td><input class="btn btn-primary" type="reset" name="cancel" value="reset"></td>
 			</tr>	
 			
 		</div>
@@ -77,7 +77,8 @@ if(isset($_POST['simpan'])){
 					<td><?php echo $row['id_prodi']; ?></td>
 					<td><?php echo $row['nama_prodi']; ?></td>
 				
-					<td><a href="delprodi.php?id_prodi=<?php echo"$row[id_prodi]";?>">Delete</a></td>
+					<td><a class="btn btn-danger"href="delprodi.php?id_prodi=<?php echo"$row[id_prodi]";?>">Delete</a></td>
+					
 					
 			
 					

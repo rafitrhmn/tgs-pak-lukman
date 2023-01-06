@@ -13,31 +13,6 @@
         <link href="style.css" rel="stylesheet">
 </head>
 <!-- footer paling atas -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Rafi taufiqurahman</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">halaman 1</a></li>
-        <li><a href="#">halaman 2</a></li>
-        <li><a href="#">halaman 3</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> daftar</a></li>
-        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> masuk</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>  
-
         <div class="container-fluid">
             <!-- Bagian Header -->
             <div class="row">
@@ -80,9 +55,6 @@
                         include "prodi.php";
                         break;
 
-                        default:
-                        include "home.php";
-                        break;
                     }
 
                     ?>

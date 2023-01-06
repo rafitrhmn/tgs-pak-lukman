@@ -1,0 +1,88 @@
+<style>
+body{
+ background-color: powderblue !important;
+}
+    /* Style the form */
+form {
+  max-width: 300px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Style the form fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+input {
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  height: 40px;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+</style>
+
+
+<?php
+// sambungkan ke database
+$conn = new mysqli('localhost', 'root', '', 'universitas');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // form login dikirim, proses data login
+
+  // ambil data dari form
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // periksa apakah username dan password cocok dengan data di database
+  $result = $conn->query("SELECT * FROM 'admin' WHERE username='$username' AND password='$password'");
+  if ($result->num_rows > 0) {
+    // username dan password cocok, arahkan ke halaman beranda
+    header('Location: /index.php');
+    exit;
+  } else {
+    // username atau password tidak cocok
+    echo "Username atau password salah. Silakan coba lagi.";
+  }
+
+} else {
+  // form login belum dikirim, tampilkan form login
+  ?>
+  <form action="/login.php" method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <?php
+}
+
+// tutup koneksi ke database
+$conn->close();
+?>

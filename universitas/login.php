@@ -45,9 +45,10 @@ button[type="submit"]:hover {
   background-color: #0069d9;
   border-color: #0062cc;
 }
+</style>
 
-    </style>
-<form action="/login" method="post">
+
+<form action="cek_login.php" method="post">
   <div class="form-group">
     <label for="username">Nama</label>
     <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
