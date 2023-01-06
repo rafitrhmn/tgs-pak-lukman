@@ -1,39 +1,31 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pengisian krs</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<meta http-equiv="Content-Type" content="text/htal charsetutf-8"/>
+ <title>Untitled Document</title> 
 </head>
+
 <body>
-	<div class="container">
-    <form action="simpan_krs.php" method="post">
-    <table width="427">
-		<tr>        
-			<td width="67">nim</td>
-			<td width="348"><input type="text" name="nim" /></td>
-		</tr>
-<tr>
-<td>nama</td>
-<td><input type="text" name="nama" /></td>
-</tr>
-<td colspan="2">Daftar Mata Kuliah</td>
-<tr>
 <?php
-$mata_kuliah= array("pembukuan2","Akuntansi","Sistem pakar,Basis data","Akuntansi 2");
-for($i=0; $i<count($mata_kuliah); $i++) {
-?>
-<tr>
-<td colspan="2">
-<input name="mata_kuliah[]" type="checkbox" id="mata_kuliah[]" value="<?php echo $mata_kuliah[$i]; ?>" />
-<?php echo $mata_kuliah[$i];?></td>
-</tr>
-<?php }  ?>
-<tr>
-<td><input name="oke" type="submit" id="oke" value="proses" /></td>
-</tr>
-</tr></table>
-</form>
+$nim $_POST['nim']
+$nama=$_POST['nama'];
+$mata_kuliah=$_POST('mata_kuliah');
+$conect mysqli_connect("localhost","root","","universitas");
+mysqli_autocommit ($conect, FALSE);
+$valid-true;
+for($i=0; $i<count($mata_kuliah); $i++) (
+$sql-"INSERT INTO krs (id krs, nim, nama,mata_kuliah) values (null,'$nim',"$nama','$mata_kuliah($i)')";
+
+$hasil=mysqli_query($conect, $sql);
+echo $sql."<br>";
+$vaild= $valid  && $valid;
+)
+
+if ($valid) {
+mysqli_commit($conect);
+$msg="berhasil";)
+else ( mysqli rollback($conect);
+Smsg="gagal";)
+
 </body>
 </html>
+
+
