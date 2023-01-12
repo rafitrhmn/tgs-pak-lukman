@@ -5,5 +5,5 @@
 	}
 	$sql = "DELETE FROM fakultas where id_fakultas =('$_GET[id_fakultas]')";
 	$data=$database->query($sql);
-	header("location:index.php?page=3");
+	header("location:beranda.php?page=3");
 	?>

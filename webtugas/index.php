@@ -40,13 +40,14 @@
                     <div class="col-lg-6">
                         <h2>Universitas Bina Insan</h2>
                         <p class="lead">Mahasisiwa Universitas Bina insan kota Lubuklinggau</p>
-                        <p class="mb-0">The universe is almost 14 billion years old, and, wow! Life had no problem starting here on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone in the universe.</p>
+                        <p class="mb-0">klik DAFTAR jika belum mempunyai akun</p>
+                        <p class="mb-0">klik MASUK jika mempunyai akun</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Image element - set the background image for the header in the line below-->
-        <div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
+        <div class="py-5 bg-image-full" style="background-image: url('gambar2.png')">
             <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
             <div style="height: 20rem"></div>
         </div>
@@ -55,16 +56,16 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <h2>Engaging Background Images</h2>
-                        <p class="lead">The background images used in this template are sourced from Unsplash and are open source and free to use.</p>
-                        <p class="mb-0">I can't tell you how many people say they were turned off from science because of a science teacher that completely sucked out all the inspiration and enthusiasm they had for the course.</p>
+                        <h2>Semangat Univbi</h2>
+                        <p class="lead">mahasiswa universitas bina insan kota Lubuklinggau</p>
+                        <p class="mb-0">semangat membara menuntut ilmu di univeristas bina insan kota Lubuklinggau. Rafi taufiqurahman (21.02.02.0123) Informatika A4 semester 3</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; rafitrhmn2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Rafitaufiqurahman(21.02.02.0123)</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

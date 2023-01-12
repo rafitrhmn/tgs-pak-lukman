@@ -41,7 +41,7 @@ if(isset($_POST['simpan'])){
 
 	$sql= "INSERT INTO matakuliah VALUES ('$id_matakuliah','$nama_matakuliah','$sks','$semester')";
 	$data = $database->query($sql);
-	header("location: index.php?page=2");
+	header("location: beranda.php?page=2");
 	} ?>
 	<form method="post" action="">	
 		<div class="container">
@@ -96,10 +96,10 @@ if(isset($_POST['simpan'])){
 					<td><?php echo $row['sks']; ?></td>
 					<td><?php echo $row['semester']; ?></td>
 			
-					<td><a class="btn btn-danger"href="delmk.php?id_matakuliah=<?php echo"$row[id_matakuliah]";?>">Delete</a></td>
-					
-			
-					
+					<td>
+						<a class="btn btn-danger"href="delmk.php?id_matakuliah=<?php echo"$row[id_matakuliah]";?>">Delete</a>
+						<a class="btn btn-warning" type="submit">Edit </a>
+					<td>
 				</tr>
 			
 	<?php 	}?>

@@ -5,5 +5,5 @@
 	}
 	$sql = "DELETE FROM prodi where id_prodi =('$_GET[id_prodi]')";
 	$data=$database->query($sql);
-	header("location:index.php?page=4");
+	header("location:beranda.php?page=4");
 	?>

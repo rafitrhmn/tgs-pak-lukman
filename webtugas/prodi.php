@@ -37,7 +37,7 @@ if(isset($_POST['simpan'])){
 
 	$sql= "INSERT INTO prodi VALUES ('$id_prodi','$nama_prodi')";
 	$data = $database->query($sql);
-	header("location: index.php?page=4");
+	header("location: beranda.php?page=4");
 	} ?>
 	<form method="post" action="">	
 		<div class="container">
@@ -77,11 +77,10 @@ if(isset($_POST['simpan'])){
 					<td><?php echo $row['id_prodi']; ?></td>
 					<td><?php echo $row['nama_prodi']; ?></td>
 				
-					<td><a class="btn btn-danger"href="delprodi.php?id_prodi=<?php echo"$row[id_prodi]";?>">Delete</a></td>
-					
-					
-			
-					
+					<td>
+						<a class="btn btn-danger"href="delprodi.php?id_prodi=<?php echo"$row[id_prodi]";?>">Delete</a>
+						<a class="btn btn-warning" type="submit">Edit </a>
+					<td>
 				</tr>
 			
 	<?php 	}?>

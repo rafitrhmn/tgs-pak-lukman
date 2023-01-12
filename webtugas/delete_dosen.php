@@ -5,5 +5,5 @@
 	}
 	$sql =  "DELETE FROM dosen where nidn = ('$_GET[nidn]')";
 	$data=$database->query($sql);
-	header("location:index.php?page=1");
+	header("location:beranda.php?page=1");
 ?>

@@ -42,7 +42,7 @@
 	
 	$sql= "INSERT INTO dosen VALUES('$nidn','$nama','$fakultas','$prodi','$mata_kuliah','$alamat','$no_telpon')";
 	$data = $database->query($sql);
-	header("location:index.php?page=1");
+	header("location:beranda.php?page=1");
 	} ?>
 	<form method="post" action="">	
 		<div class="container">
@@ -106,14 +106,14 @@
 	</form>
 	<table border="1" cellspacing="0" class="table">
 				<tr>
-					<td>nidn</td>
-					<td>nama</td>
-					<td>fakultas</td>
-					<td>prodi</td>
-					<td>mata_kuliah</td>
-					<td>alamat</td>
-					<td>no_telpon</td>
-					<td>opsi</td>
+					<td>NIDN</td>
+					<td>Nama</td>
+					<td>Fakultas</td>
+					<td>Prodi</td>
+					<td>Mata Kuliah</td>
+					<td>Alamat</td>
+					<td>No Telpon</td>
+					<td>Opsi</td>
 				</tr>
 <?php
 	$sql= "SELECT * FROM dosen";
@@ -131,7 +131,10 @@
 					<td><?php echo $row['mata_kuliah']; ?></td>
 					<td><?php echo $row['alamat']; ?></td>
 					<td><?php echo $row['no_telepon']; ?></td>
-					<td><a class="btn btn-danger" href="delete_dosen.php?nidn=<?php echo"$row[nidn]";?>">Delete</td>
+					<td>
+						<a class="btn btn-danger" href="delete_dosen.php?nidn=<?php echo"$row[nidn]";?>">Delete </a>
+						<a class="btn btn-warning" type= "submit">Edit </a>
+					</td>
 				</tr>
 			
 	<?php 	}?>

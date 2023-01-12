@@ -37,7 +37,7 @@ if(isset($_POST['simpan'])){
 
 	$sql= "INSERT INTO fakultas VALUES('$id_fakultas','$nama_fakultas')";
 	$data = $database->query($sql);
-	header("location:index.php?page=3");
+	header("location:beranda.php?page=3");
 	} ?>
 	<form method="post" action="">	
 		<div class="container">
@@ -59,9 +59,9 @@ if(isset($_POST['simpan'])){
 <table border="1" cellspacing="0" class="table">
 </tr>
 				<tr>
-					<td>ID_FAKULTAS</td>
-					<td>NAMA_FAKULTAS</td>
-					<td>OPSI</td>
+					<td>ID fakultas</td>
+					<td>Nama Fakultas</td>
+					<td>Opsi</td>
 				</tr>
 <?php				
 
@@ -76,9 +76,10 @@ if(isset($_POST['simpan'])){
 				<tr>
 					<td><?php echo $row['id_fakultas']; ?></td>
 					<td><?php echo $row['nama_fakultas']; ?></td>
-					
-					<td><a class="btn btn-danger"href="delfakul.php?id_fakultas=<?php echo"$row[id_fakultas]";?>">Delete</a></td>
-					
+					<td>
+						<a class="btn btn-danger"href="delfakul.php?id_fakultas=<?php echo"$row[id_fakultas]";?>">Delete </a>
+						<a class="btn btn-warning" type="submit">Edit </a>
+					<td>
 				</tr>
 			
 	<?php 	}?>

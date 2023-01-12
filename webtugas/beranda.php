@@ -55,6 +55,9 @@
                         include "prodi.php";
                         break;
 
+                        default:
+                        include "dosen.php";
+                        break;
                     }
 
                     ?>
@@ -62,9 +65,8 @@
             </div>
 
             <!--bagian footer-->
-            <div class ="row-center">
-                <div class="col-md-12 footer" id="site-footer">
-                    <footer class="copyright" text-center><p>universitas.com</p></footer>
-                </div>
+            <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Rafitaufiqurahman(21.02.02.0123)</p></div>
+        </footer>
             </div>
             </html>

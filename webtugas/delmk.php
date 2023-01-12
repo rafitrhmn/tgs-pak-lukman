@@ -5,5 +5,5 @@
 	}
 	$sql = "DELETE FROM matakuliah where id_matakuliah =('$_GET[id_matakuliah]')";
 	$data=$database->query($sql);
-	header("location:index.php?page=2");
+	header("location:beranda.php?page=2");
 	?>
